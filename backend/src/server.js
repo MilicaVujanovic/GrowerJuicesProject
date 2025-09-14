@@ -53,11 +53,10 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', uptime: process.uptime() });
 });
 
-// **IZBRIŠI OVO** kad deployaš na Lambda
-// const port = 5000;
-// app.listen(port, () => {
-//   console.log("Website served on http://localhost:" + port);
-// });
+const port = 5000;
+app.listen(port, () => {
+  console.log("Website served on http://localhost:" + port);
+});
 
 // Serverless export za AWS Lambda
 export const handler = serverless(app);

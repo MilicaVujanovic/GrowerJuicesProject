@@ -23,7 +23,7 @@ const orderSchema = new Schema(
     paymentId: { type: String },
     totalPrice: { type: Number, required: true },
     items: { type: [OrderItemSchema], required: true }, // niz OrderItem sub-documents
-    status: { type: String, default: OrderStatus.NEW },
+    status: { type: String, default: OrderStatus.NEW , required: true},
     user: { type: Schema.Types.ObjectId, required: true }, // foreign key
   },
   {

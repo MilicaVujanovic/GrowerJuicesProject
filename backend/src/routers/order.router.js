@@ -13,17 +13,19 @@ router.post(
   asyncHandler(async (req, res) => {
     const requestOrder = req.body;
 
+    console.log("reqBody ",req.body)
+
     if (!requestOrder.items || requestOrder.items.length <= 0) {
       res.status(HTTP_BAD_REQUEST).send('Cart Is Empty!');
       return;
     }
 
-    await OrderModel.deleteOne({
-      user: req.user.id,
-      status: OrderStatus.NEW,
-    });
-
+    
+    requestOrder.status = OrderStatus.NEW;
+    console.log("StatusValue", OrderStatus.NEW)
+    console.log("reqOrder", requestOrder)
     const newOrder = new OrderModel({ ...requestOrder, user: req.user.id });
+    console.log("newOrder", newOrder)
     await newOrder.save();
     res.send(newOrder);
   })
@@ -87,6 +89,7 @@ router.post(
     }
 
     order.status = OrderStatus.PAYED_ON_DELIVERY;
+    console.log("aaaaaaaaa", order.status);
     await order.save();
 
     res.send({ message: 'Payment on Delivery processed successfully', orderId: order._id });
