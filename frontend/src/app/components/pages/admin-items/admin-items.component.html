@@ -1,0 +1,72 @@
+<div class="main-container">
+  <button class="add-button" (click)="toggleAddForm()">Add Juice</button>
+
+  <div class="table-container">
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let juice of juices" class="product-row">
+          <td>
+            <img [src]="juice.imageUrl" [alt]="juice.name" class="product-image" />
+          </td>
+          <td class="product-name">{{ juice.name }}</td>
+          <td class="product-price">{{ juice.price }} $</td>
+          <td class="product-tags">{{ juice.tags?.join(", ") }}</td>
+          <td class="action-buttons">
+            <button class="delete-button" (click)="confirmDelete(juice.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="showAddForm" class="overlay">
+    <div class="add-product-container">
+      <div class="form-wrapper">
+        <h2>Add New Juice</h2>
+        <form (ngSubmit)="addJuice()">
+          <div class="form-group">
+            <label>Name:</label>
+            <input type="text" [(ngModel)]="newJuice.name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label>Price:</label>
+            <input type="number" [(ngModel)]="newJuice.price" name="price" required />
+          </div>
+          <div class="form-group">
+            <label>Tags:</label>
+            <input type="text" [(ngModel)]="newJuice.tags" name="tags" />
+          </div>
+          <div class="form-group">
+            <label>Image URL:</label>
+            <input type="text" [(ngModel)]="newJuice.imageUrl" name="imageUrl" />
+          </div>
+          <div class="form-group">
+            <label>Origins:</label>
+            <input type="text" [(ngModel)]="newJuice.origins" name="origins" />
+          </div>
+          <div class="form-group">
+            <label>Favorite:</label>
+            <input type="checkbox" [(ngModel)]="newJuice.favorite" name="favorite" />
+          </div>
+          <div class="form-group">
+            <label>Prepare Time:</label>
+            <input type="text" [(ngModel)]="newJuice.prepareTime" name="prepareTime" />
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="submit-button">Add Juice</button>
+            <button type="button" class="cancel-button" (click)="toggleAddForm()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

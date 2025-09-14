@@ -1,0 +1,89 @@
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+li a{
+  height: 22.5rem;
+  width: 20rem;
+  border: 1px solid #d1d5db; /* Promenjena boja granice */
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #1f2937; /* Promenjena boja teksta */
+  font-family: 'Roboto', sans-serif; /* Dodali smo novi font */
+  background-color: #f9fafb; /* Promenjena boja pozadine */
+}
+
+li a:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+li a img{
+  object-fit: cover;
+  height: 14.5rem;
+}
+
+.content{
+  margin-top: 0.3rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  height: 7rem;
+}
+
+.favorite{
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  color: #ef4444; /* Promenjena boja ikonice omiljenih */
+}
+
+.favorite.not{
+  color: #9ca3af; /* Promenjena boja za ne-omiljene */
+}
+
+.product-item-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.origins{
+  flex: 9;
+}
+
+.origins span{
+  border-radius: 2rem;
+  background-color: #e5e7eb; /* Promenjena boja pozadine oznaka */
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #1f2937; /* Promenjena boja teksta oznaka */
+  margin-right: 0.3rem;
+  padding: 0 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.cook-time{
+  font-size: 0.9rem;
+  flex: 3;
+  text-align: right;
+}
+
+.price{
+  position: absolute;
+  bottom: 0;
+  left: 0.9rem;
+  background: #f3f4f6; /* Promenjena boja pozadine cene */
+  padding: 0.3rem 100% 0 0;
+  color: #1f2937; /* Promenjena boja teksta cene */
+  margin-top: 0.7rem;
+  font-size: 1.1rem;
+}

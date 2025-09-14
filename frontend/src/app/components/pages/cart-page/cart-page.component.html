@@ -1,0 +1,34 @@
+<app-title margin="1.5rem 0 0 2.5rem"></app-title>
+<app-not-found
+  [visible]="!cart || !cart.items.length"
+  notFoundMessage="Your cart is empty!"
+  resetLinkText="Go to Grower Juices"
+></app-not-found>
+
+<div class="cart-container" *ngIf="cart && cart.items.length > 0">
+  <div class="cart-items">
+    <div class="cart-item" *ngFor="let cartItem of cart.items">
+      <img [src]="cartItem.juice.imageUrl" [alt]="cartItem.juice.name" />
+      <div class="item-details">
+        <a routerLink="/juice/{{ cartItem.juice.id }}">{{ cartItem.juice.name }}</a>
+        <select
+          #quantitySelect
+          [value]="cartItem.quantity"
+          (change)="changeQunatity(cartItem, quantitySelect.value)"
+        >
+          <option *ngFor="let i of [1,2,3,4,5]">{{ i }}</option>
+        </select>
+        <span class="price">{{ cartItem.price | currency }}</span>
+        <button class="remove-button" (click)="removeFromCart(cartItem)">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout-summary">
+    <div class="summary-info">
+      <div class="food-count">{{ cart.totalCount }} items</div>
+      <div class="total-price">{{ cart.totalPrice | currency }}</div>
+    </div>
+    <a routerLink="/checkout" class="checkout-button">Proceed to Checkout</a>
+  </div>
+</div>

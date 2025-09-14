@@ -1,0 +1,70 @@
+.container{
+    margin-top: 3rem;
+    display: flex;
+    margin: 0 2rem 6rem 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .content{
+    width: 35rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+
+  .summary > div{
+    display: flex;
+    margin-top: 0.7rem;
+  }
+
+  .summary span {
+    font-size: 1.2rem;
+  }
+
+  .summary h3{
+    margin: 0 1rem 0 0;
+    flex-basis: 5rem;
+  }
+
+
+  .buttons-container{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons{
+    margin: 2rem;
+    width: 35rem;
+  }
+
+  /* Stilizacija dugmeta "Pay on Delivery" */
+button {
+  color: white;
+  background-color: #38a169; /* Tamno zelena boja za dugme */
+  border: none;
+  border-radius: 0.5rem; /* Zaobljeni uglovi */
+  padding: 0.75rem 1.5rem; /* Unutrašnji razmak */
+  font-size: 1.2rem; /* Veličina fonta */
+  font-weight: bold;
+  text-transform: uppercase; /* Velika slova */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blaga senka */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animacija */
+  cursor: pointer; /* Pokazuje da je dugme klikabilno */
+  width: 35rem;
+  margin-bottom: 10px;
+}
+
+/* Hover efekat */
+button:hover {
+  background-color: #2f855a; /* Tamnija zelena za hover */
+  transform: translateY(-2px); /* Blagi pomak prema gore */
+}
+
+/* Fokus efekat */
+button:focus {
+  outline: none; /* Ukloni standardni fokus okvir */
+  box-shadow: 0 0 0 3px rgba(56, 174, 80, 0.4); /* Svetla zelena senka */
+}

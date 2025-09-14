@@ -1,0 +1,37 @@
+<app-not-found
+  [visible]="!juice"
+  notFoundMessage="JUICE NOT FOUND"
+  resetLinkText="Back to Homepage"
+></app-not-found>
+
+<div *ngIf="juice" class="container">
+  <img [src]="juice.imageUrl" [alt]="juice.name" />
+  <div class="details">
+    <div class="header">
+      <span class="name">{{ juice.name }}</span>
+      <span class="favorite {{ juice.favorite ? '' : 'not' }}"> ❤</span>
+    </div>
+
+    <div class="origins">
+      <span *ngFor="let origin of juice.origins">
+        {{ origin }}
+      </span>
+    </div>
+
+    <div class="tags">
+      <a *ngFor="let tag of juice.tags" routerLink="/tag/{{ tag }}">
+        {{ tag }}
+      </a>
+    </div>
+
+    <div class="cook-time">
+      <span>Time to prepare <strong>{{ juice.prepareTime }}</strong> hours</span>
+    </div>
+
+    <div class="price">
+      <span>{{ juice.price | currency }}</span>
+    </div>
+
+    <button (click)="addToCart()">Add To Cart</button>
+  </div>
+</div>

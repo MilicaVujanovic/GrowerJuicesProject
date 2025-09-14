@@ -1,0 +1,152 @@
+/* Container for the entire content */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  max-width: 80%;
+  background-color: #f9fafb; /* Svetla pozadina za bolji kontrast */
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka za dubinu */
+}
+
+.container > * {
+  min-width: 25rem;
+  max-width: 40rem;
+}
+
+/* Styling for the image */
+img {
+  border-radius: 1.5rem; /* Zaobljeni uglovi za sliku */
+  flex: 1 0;
+  object-fit: cover;
+  height: 30rem; /* Manja visina za bolji izgled */
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka oko slike */
+}
+
+/* Styling for the details section */
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  padding: 2rem;
+  background-color: white; /* Pozadina za detalje */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka oko detalja */
+  color: #1f2937; /* Tamno siva za tekst */
+}
+
+/* Styling for the header section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 2.2rem; /* Veći font za naziv */
+  font-weight: bold;
+  color: #111827; /* Tamno siva boja za naziv */
+}
+
+.favorite {
+  color: #e53e3e; /* Crvena boja za favorite */
+  font-size: 2.5rem;
+}
+
+.favorite.not {
+  color: #a0aec0; /* Svetlo siva za neaktivni favorite */
+}
+
+/* Styling for origins */
+.origins {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.origins span {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin: 0.5rem;
+  border-radius: 20px; /* Veći zaobljeni uglovi */
+  background-color: #e2e8f0; /* Svetlo plava pozadina */
+  color: #1a202c; /* Tamno siva boja za tekst */
+}
+
+/* Styling for tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.tags a {
+  background-color: #edf2f7; /* Svetlo siva pozadina za tagove */
+  padding: 0.5rem 1rem;
+  margin: 0.2rem 0.3rem;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #2b6cb0; /* Plava boja za tekst */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tags a:hover {
+  background-color: #cbd5e0; /* Tamnija siva za hover */
+  color: #2b6cb0; /* Očuvanje boje teksta za hover */
+}
+
+/* Styling for cook-time */
+.cook-time {
+  margin-top: 1rem;
+}
+
+.cook-time span {
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  background-color: #f7fafc; /* Svetla pozadina za vreme pripreme */
+  color: #2d3748; /* Tamno siva boja za tekst */
+}
+
+/* Styling for price */
+.price {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  color: #38a169; /* Zeleni za cenu */
+}
+
+.price::before {
+  content: "Price: ";
+  color: #4a5568; /* Tamno siva za oznaku */
+}
+
+/* Styling for the button */
+button {
+  color: white;
+  background: #3182ce; /* Plava boja za dugme */
+  border: none;
+  font-size: 1.2rem; /* Manja veličina fonta */
+  padding: 0.8rem 1.5rem; /* Manji unutrašnji razmak */
+  border-radius: 20px; /* Manji zaobljeni uglovi */
+  outline: none;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Prelazi za pozadinu i senku */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Blaga senka za dubinu */
+  width: 120px;
+  height: 80px;
+}
+
+button:hover {
+  background-color: #2b6cb0; /* Tamnija plava za hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Tamnija senka za hover */
+  cursor: pointer;
+}
+
+
+
+

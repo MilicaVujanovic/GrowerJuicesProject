@@ -1,0 +1,122 @@
+/* Container for the entire cart content */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 90%;
+  background-color: #ffffff; /* Bela pozadina za kontrast */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Veća senka za dubinu */
+}
+
+.cart-items {
+  width: 100%;
+  max-width: 1000px;
+  border-top: 1px solid #e2e8f0; /* Svetla granica na vrhu */
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0; /* Svetla granica između stavki */
+  gap: 15px;
+}
+
+.cart-item img {
+  width: 80px; /* Manja širina slike */
+  height: 80px; /* Manja visina slike */
+  border-radius: 12px; /* Manji zaobljeni uglovi */
+  object-fit: cover;
+  margin-right: 1rem; /* Razmak između slike i detalja */
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-details a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2b6cb0; /* Plava boja za naziv */
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.item-details select {
+  border: 1px solid #e2e8f0; /* Svetla granica za selektor */
+  border-radius: 8px;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  background-color: #f7fafc; /* Svetla pozadina */
+}
+
+.item-details .price {
+  font-size: 1.1rem;
+  color: #2d3748; /* Tamno siva za cenu */
+  margin-bottom: 0.5rem;
+}
+
+.remove-button {
+  background: #e53e3e; /* Crvena boja za dugme */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  width: 80px;
+
+}
+
+.remove-button:hover {
+  background-color: #c53030; /* Tamnija crvena za hover */
+}
+
+.checkout-summary {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0; /* Svetla granica na vrhu */
+  background-color: #f7fafc; /* Svetla pozadina */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Senka oko sekcije */
+}
+
+.summary-info {
+  font-size: 1.2rem;
+  color: #2d3748; /* Tamno siva boja za tekst */
+  margin-bottom: 1rem;
+  gap: 15px;
+}
+
+.summary-info .food-count {
+  font-weight: 500;
+}
+
+.checkout-button {
+  background: #3182ce; /* Plava boja za dugme */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 80%;
+  max-width: 220px;
+  transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+  background-color: #2b6cb0; /* Tamnija plava za hover */
+}

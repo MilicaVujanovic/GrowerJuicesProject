@@ -1,0 +1,41 @@
+<app-seacrh></app-seacrh>
+<app-tags></app-tags>
+<app-not-found
+resetLinkRoute="Reset Search"
+></app-not-found>
+<ul>
+  <li *ngFor="let juice of juices">
+    <a routerLink="/juice/{{juice.id}}">
+      <img [src]="juice.imageUrl" [alt]="juice.name" />
+      <div class="content">
+        <div class="name">
+          {{juice.name}}
+        </div>
+        <span class="favorite {{juice.favorite ? '' : 'not'}}">
+          ❤
+        </span>
+        
+      
+        
+        <div class="product-item-footer">
+          <div class="origins">
+            <span *ngFor="let origin of juice.origins">
+              {{origin}}
+            </span>
+          </div>
+
+          <div class="cook-time">
+            <span>🕒</span>
+            {{juice.prepareTime}}
+          </div>
+        </div>
+
+        <div class="price">
+          <span>
+            {{juice.price | currency}}
+          </span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

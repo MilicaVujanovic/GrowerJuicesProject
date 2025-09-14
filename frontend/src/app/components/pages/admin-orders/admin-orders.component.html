@@ -1,0 +1,33 @@
+<div class="order-list-container">
+  <h2>All Orders</h2>
+  <table class="order-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Total Price</th>
+        <th>Address</th>
+        <th>Created At</th>
+        <th>Status</th>
+        <th>Juice Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.name }}</td>
+        <td>{{ order.totalPrice | currency }}</td>
+        <td>{{ order.address }}</td>
+        <td>{{ order.createdAt | date:'medium' }}</td>
+        <td>{{ order.status }}</td>
+
+        <!-- Prikaz prve stavke narudžbe -->
+        <td *ngIf="order.items && order.items.length > 0">{{ order.items[0].juice.name }}</td>
+        <td *ngIf="order.items && order.items.length > 0">{{ order.items[0].quantity }}</td>
+        <td *ngIf="order.items && order.items.length > 0">{{ order.items[0].price | currency }}</td>
+      </tr>
+
+    
+    </tbody>
+  </table>
+</div>

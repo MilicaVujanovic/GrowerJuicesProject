@@ -1,0 +1,20 @@
+service: grower-backend
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  environment:
+    DATABASE_URL: "mongodb+srv://milica2001vujanovic:n9afPBTzcMPmvG1S@cluster0.alf7q.mongodb.net/grower?retryWrites=true&w=majority&appName=Cluster0"
+    JWT_SECRET: "tvojTajniJWTKey"  # Ovaj ključ koristi backend za verifikaciju JWT tokena
+
+functions:
+  api:
+    handler: handler.handler   # handler.js eksportuje jednu funkciju `handler` za serverless-http
+    events:
+      - http:
+          path: /{proxy+}       # Proxy path omogućava da sve rute iz Expressa rade
+          method: any           # Omogućava GET, POST, PUT, DELETE, itd.
+
+plugins:
+  - serverless-dotenv-plugin

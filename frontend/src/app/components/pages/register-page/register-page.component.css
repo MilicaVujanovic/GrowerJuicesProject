@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 0.5rem;
+}
+
+.details {
+  width: 35rem;
+  background-color: #ffffff; /* Bijela pozadina za kontrast */
+  padding: 2rem; /* Dodajte padding za razmak */
+  border-radius: 8px; /* Zaobljeni uglovi */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), /* Glavna sjenka */
+              0 4px 6px rgba(0, 0, 0, 0.05); /* Suptilna unutrašnja sjenka */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Roboto', sans-serif; /* Moderna i čista font */
+}
+
+text-input {
+  margin-bottom: 1rem; /* Razmak između polja */
+  padding: 0.75rem; /* Padding unutar polja za unos */
+  font-size: 1rem; /* Povećana veličina fonta za čitljivost */
+  border-radius: 4px; /* Zaobljeni uglovi */
+  height: 70px;
+}
+
+text-input:focus {
+  border-color: #007bff; /* Plava granica na fokus */
+  outline: none; /* Ukloni default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Suptilna sjenka na fokus */
+}
+
+.error-list {
+  color: #e74c3c; /* Crvena boja za greške */
+  font-size: 0.9rem; /* Nešto manji font za greške */
+  margin-bottom: 1rem; /* Razmak ispod poruka greške */
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -0.5rem; /* Razmak iznad linka za registraciju */
+  font-size: 0.9rem; /* Nešto manji font */
+}
+
+.login a {
+  color: #007bff; /* Plava boja za link */
+  text-decoration: none; /* Ukloni podvlačenje */
+  margin-left: 0.1rem; /* Razmak između teksta i linka */
+}
+
+.login a:hover {
+  text-decoration: underline; /* Podvuci na hover */
+}
+
+/* Submit Button Styles */
+.default-button {
+  padding: 0.75rem 1.5rem; /* Padding za dugme */
+  font-size: 1.1rem; /* Veći font za dugme */
+  color: #fff; /* Bijeli tekst */
+  background-color: #007bff; /* Plava pozadina */
+  border: none; /* Ukloni default border */
+  border-radius: 4px; /* Zaobljeni uglovi */
+  cursor: pointer; /* Pointer na hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Glatki prijelaz */
+}
+
+.default-button:hover {
+  background-color: #0056b3; /* Tamnija plava na hover */
+  transform: scale(1.05); /* Blago povećanje na hover */
+}
+
+.default-button:focus {
+  outline: none; /* Ukloni default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Suptilna sjenka na fokus */
+}
+
+.default-button:disabled {
+  background-color: #cccccc; /* Svijetlo siva pozadina kada je onemogućeno */
+  cursor: not-allowed; /* Onemogućeni kursor */
+  box-shadow: none; /* Ukloni sjenku */
+}

@@ -1,0 +1,8 @@
+export class  OrderStatus {
+  NEW = "NEW";
+  PAYED = "PAYED";
+  SHIPPED = "SHIPPED";
+  CANCELED = "CANCELED";
+  REFUNDED = "REFUNDED";
+  PAYED_ON_DELIVERY = 'PAYED_ON_DELIVERY';
+}

@@ -1,0 +1,48 @@
+/* Container for tags */
+div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Povećanje razmaka između tagova */
+    padding: 20px; /* Povećanje paddinga za bolji izgled */
+    align-items: center;
+    justify-content: center;
+    background-color: #f9fafb; /* Svetla pozadina za bolji kontrast */
+    border-radius: 12px; /* Zaobljeni uglovi za container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Blaga senka za dubinu */
+}
+
+/* Individual tag styling */
+a {
+    display: inline-block;
+    padding: 10px 20px; /* Povećanje paddinga za veće tagove */
+    background-color: #e5e7eb; /* Svetlo siva boja za pozadinu tagova */
+    color: #111827; /* Tamno siva boja za tekst */
+    text-decoration: none;
+    border-radius: 20px; /* Zaobljeni uglovi za tagove */
+    font-size: 1.1em; /* Veći font za bolju čitljivost */
+    font-weight: 500; /* Polu-boldovanje za bolju vidljivost */
+    font-family: 'Arial', sans-serif; /* Font Arial */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Dodavanje transformacije za hover efekat */
+}
+
+/* Hover effect for tags */
+a:hover {
+    background-color: #d1d5db; /* Tamnija siva boja za hover */
+    color: #111827; /* Tamno siva boja za tekst pri hoveru */
+    transform: scale(1.05); /* Blago povećanje veličine tagova pri hoveru */
+}
+
+/* Active state styling */
+a.active {
+    background-color: #374151; /* Tamno siva za aktivno stanje */
+    color: #f9fafb; /* Gotovo bela boja za tekst */
+}
+
+/* Styling for when there are no tags */
+div:empty::before {
+    content: "No tags available";
+    color: #6b7280; /* Tamno siva boja za tekst */
+    font-style: italic;
+    font-family: 'Arial', sans-serif; /* Font Arial */
+    font-size: 1.1em; /* Veći font za bolju vidljivost */
+}

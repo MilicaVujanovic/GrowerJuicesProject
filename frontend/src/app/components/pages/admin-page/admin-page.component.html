@@ -1,0 +1,56 @@
+<div class="admin-container" *ngIf="isAdmin()">
+  <div class="admin-header">
+    <button class="nav-btn" [routerLink]="['/admin-items']">Juices</button>
+    <button class="nav-btn" [routerLink]="['/admin-orders']" (click)="goToOrders()">Orders</button>
+  </div>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Is Admin</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users" class="user-item">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address }}</td>
+        <td>
+          <span class="status" [ngClass]="{ 'admin': user.isAdmin, 'not-admin': !user.isAdmin }">
+            {{ user.isAdmin ? 'Admin' : 'Not Admin' }}
+          </span>
+        </td>
+        <td>
+          <button class="btn delete-btn" (click)="deleteUser(user.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-container" *ngIf="selectedUser">
+    <h2>Edit User</h2>
+    <form (submit)="updateUser()">
+      <label>Name:
+        <input type="text" [(ngModel)]="selectedUser.name" name="name" required>
+      </label><br>
+      <label>Email:
+        <input type="email" [(ngModel)]="selectedUser.email" name="email" required>
+      </label><br>
+      <label>Is Admin:
+        <input type="checkbox" [(ngModel)]="selectedUser.isAdmin" name="isAdmin">
+      </label><br>
+      <button type="submit" class="btn save-btn">Save</button>
+      <button type="button" class="btn cancel-btn" (click)="cancelUpdate()">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="!isAdmin()" class="unauthorized-container">
+  <h1>Unauthorized</h1>
+</div>

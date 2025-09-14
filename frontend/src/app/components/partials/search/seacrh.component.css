@@ -1,0 +1,43 @@
+div {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  border-radius: 20px 0 0 20px; /* Manje zaobljeno za moderniji izgled */
+  border: 2px solid #ced4da; /* Dodata blaga ivica */
+  height: 3rem;
+  width: 22rem; /* Malo širi za bolju preglednost */
+  background-color: #f8f9fa; /* Svetlija nijansa pozadine */
+  padding: 1rem 1.5rem; /* Blago povećan padding za bolji osećaj */
+  font-size: 1rem; /* Malo smanjen font za eleganciju */
+  font-weight: 400; /* Manje boldovano za suptilniji izgled */
+  outline: none;
+  transition: all 0.3s ease-in-out; /* Dodata tranzicija */
+}
+
+input:focus {
+  border-color: #495057; /* Promena boje ivice pri fokusu */
+  background-color: #e9ecef; /* Malo tamnija pozadina pri fokusu */
+}
+
+div button {
+  height: 3rem;
+  width: 6rem; /* Malo širi za bolji balans */
+  font-size: 1rem;
+  border-radius: 0 20px 20px 0; /* Manje zaobljenje */
+  border: none;
+  background-color: #007bff; /* Promena boje dugmeta na plavu */
+  color: white;
+  opacity: 0.9;
+  outline: none;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+div button:hover {
+  opacity: 1;
+  background-color: #0056b3; /* Tamnija plava pri hoveru */
+  cursor: pointer;
+}

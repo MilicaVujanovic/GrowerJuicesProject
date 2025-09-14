@@ -1,0 +1,128 @@
+header {
+  position: relative;
+  background: #f8f9fa; /* Svetlo siva pozadina */
+  padding: 0;
+  border-bottom: 1px solid #007bff; /* Plava boja za donju ivicu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Blaga senka */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Postavljanje elemenata na krajeve */
+  align-items: center; /* Vertikalno centriranje */
+  max-width: 1200px;
+  margin-left: 15px auto;
+  padding: 0 1rem; /* Dodavanje paddinga sa strane */
+}
+
+a.logo {
+  font-weight: bold;
+  font-size: 1.5rem; /* Veći font za logo */
+  padding: 1rem 1.5rem;
+  color: #343a40; /* Tamno siva boja za logo */
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  margin-right: -350px;
+}
+
+ul a {
+  padding: 1rem;
+  display: inline-block;
+  font-weight: 500; /* Srednje boldovanje za bolju čitljivost */
+
+}
+
+
+
+a span {
+  background: #007bff;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 80rem;
+  font-size: 0.8rem;
+  margin-left: -10px;
+}
+
+.menu-container {
+  position: relative;
+  margin-left: 120px;
+}
+
+.menu {
+  position: absolute;
+  z-index: 1;
+  background: white;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Snažnija senka */
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.menu-container:hover .menu {
+  display: block;
+}
+
+.menu a {
+  width: 100%;
+  min-width: 10rem; /* Veća minimalna širina */
+  padding: 0.7rem 1.5rem; /* Veći padding */
+  font-family: 'Arial', sans-serif;
+  color: #343a40; /* Tamno siva boja za tekst */
+}
+
+.menu a:hover {
+  background-color: #f1f1f1; /* Svetlo siva za hover */
+}
+
+.admin-link{
+  margin-right: -10.0rem;
+}
+
+.loginButton{
+  margin-left: 180px;
+}
+
+.logout-button {
+  height: 3rem;
+  width: 6rem; /* Širina kao dugme za meni */
+  font-size: 1rem;
+  border-radius: 20px; /* Zaobljeni uglovi */
+  border: none;
+  background-color: #007bff; /* Plava boja koja se koristi u header-u */
+  color: white;
+  opacity: 0.9;
+  outline: none;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #0056b3; /* Tamnija plava za hover */
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cart-icon {
+  font-size: 24px; /* Veličina ikone */
+  color: #333; /* Boja ikone */
+  margin-right: 10px; /* Razmak između ikone i broja u narudžbi */
+  vertical-align: middle; /* Poravnavanje ikone sa tekstom */
+}
+
+.cart-quantity{
+  font-size: 0.8rem; /* Manja veličina fonta za broj u narudžbi */
+  background-color: #3182ce; /* Plava pozadina za broj u narudžbi */
+  color: rgb(9, 9, 9); /* Boja fonta za broj u narudžbi */
+  border-radius: 8px; /* Zaobljeni uglovi za pozadinu broja */
+  padding: 0.2rem 0.2rem; /* Unutrašnji razmak oko broja */
+  font-weight: bold; /* Podebljan font za bolju vidljivost */
+  display: inline-flex; /* Uključuje inline-flex za centriranje teksta */
+  align-items: center; /* Vertikalno centriranje teksta */
+  justify-content: center; /* Horizontalno centriranje teksta */
+  min-width: 1.5rem; /* Minimalna širina za bolju vidljivost */
+  height: 1.5rem; /* Visina za bolju vidljivost */
+  line-height: 1.5rem; /* Visina linije za centriranje teksta */
+}

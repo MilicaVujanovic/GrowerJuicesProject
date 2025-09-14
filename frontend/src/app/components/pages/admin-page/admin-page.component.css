@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modernija font porodica */
+  background-color: #e9ecef; /* Svetlija pozadina za bolji kontrast */
+  color: #495057; /* Tamno siva za bolju čitljivost */
+  line-height: 1.6; /* Bolja prostranstva između linija */
+}
+
+.admin-container {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px; /* Veći zaobljeni uglovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Nježnija senka za dublji izgled */
+  max-width: 1200px;
+  margin: 20px auto;
+}
+/* Navigation Buttons */
+.admin-header {
+  margin-bottom: 25px;
+}
+
+.nav-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px; /* Veći zaobljeni uglovi */
+  padding: 12px 24px;
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600; /* Povećava težinu fonta */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Dodaje tranziciju */
+}
+
+.nav-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Blagi zoom efekat */
+}
+/* Table Styles */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.user-table th, .user-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6; /* Svetla siva za bolju vidljivost */
+}
+
+.user-table th {
+  background-color: #f8f9fa; /* Svetlo siva pozadina za zaglavlja */
+  font-weight: 700; /* Podebljan font za zaglavlja */
+}
+
+.user-item:hover {
+  background-color: #f1f1f1; /* Svetlija boja za hover efekat */
+}
+/* Status Styles */
+.status {
+  display: inline-block;
+  padding: 8px 12px; /* Veći padding za bolji izgled */
+  border-radius: 12px; /* Veći zaobljeni uglovi */
+  font-size: 14px; /* Veći font za bolju čitljivost */
+  font-weight: 600;
+}
+
+.admin {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.not-admin {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+/* Form Styles */
+.form-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px; /* Veći font za naslove */
+  color: #333; /* Tamna boja za bolje čitanje */
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 8px; /* Manji razmak između labela i inputa */
+  font-size: 16px; /* Ujednačena veličina fonta */
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ced4da; /* Svetlija siva za ivice */
+  border-radius: 6px; /* Veći zaobljeni uglovi */
+}
+
+.form-container .btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container .btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.save-btn {
+  background-color: #28a745;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}/* Button Styles for Select and Delete */
+.btn.select-btn {
+  background-color: #17a2b8;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.select-btn:hover {
+  background-color: #117a8b;
+  transform: scale(1.05);
+}
+
+.btn.delete-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.delete-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+/* Unauthorized Styles */
+.unauthorized-container {
+  text-align: center;
+  margin: 100px auto;
+  font-size: 28px; /* Veći font za bolju vidljivost */
+  color: #dc3545; /* Crvena boja za naglašavanje */
+}
+
